@@ -149,37 +149,153 @@ db.movies
   )
   .sort({ "tomatoes.viewer.rating": 1 });
 
-db.movies.find(
+// Part 2, Movies
+// Add two movies you like that were released between 2017 and 2024.
+db.movies.insertMany([
   {
-    comments: { $elemMatch: { name: { $in: ["Ygritte", "Hodor"] } } },
+    _id: "20001234_m_1",
+    title: "Wonder Woman",
+    year: 2017,
+    runtime: 2,
+    cast: [
+      "Gal Gadot",
+      "Chris Pine",
+      "Robin Wright",
+      "Lucy Davis",
+      "Connie Nielsen",
+      "Danny Huston",
+    ],
+    plot: "Diana, princess of the Amazons, trained to be an unconquerable warrior. Raised on a sheltered island paradise, when a pilot crashes on their shores and tells of a massive conflict raging in the outside world, Diana leaves her home, convinced she can stop the threat. Fighting alongside man in a war to end all wars, Diana will discover her full powers and her true destiny.",
+    genres: ["Action", "Adventure", "Fantasy", "Sci-Fi", "War"],
+    imdb: {
+      rating: 7.3,
+      votes: 712000,
+    },
   },
   {
-    _id: 0,
-    title: 1,
-  }
-);
+    _id: "20001234_m_2",
+    title: "Still: A Michael J. Fox Movie",
+    year: 2023,
+    runtime: 1.35,
+    cast: ["Michael J. Fox", "Davis Guggenheim", "Tracy Pollan", "Sam Fox"],
+    plot: "Follows the life of beloved actor and advocate Michael J. Fox, exploring his personal and professional triumphs and travails, and what happens when an incurable optimist confronts an incurable disease.",
+    genres: ["Documentary", "Biography"],
+    imdb: {
+      rating: 8.1,
+      votes: 16000,
+    },
+  },
+]);
 
-db.movies.find(
+// Part 2, Users
+//
+db.users.insertMany([
   {
-    "tomatoes.viewer.numReviews": { $gte: 100 },
+    _id: "20001234_u_1",
+    favourites: [
+      { _id: "20001234_m_1" },
+      { _id: ObjectId("573a1390f29313caabcd4218") },
+      { _id: ObjectId("573a1390f29313caabcd4217") },
+    ],
+    name: "James Madison",
+    email: "james.madison@gmail.com",
+    password: "eljamesloco56=",
+    phone: "353 090807060",
+    imdb_membership_year: 2010,
+    subscription: {
+      type: "6 month",
+      price_per_month: 35,
+    },
+    shipping_address: "2 Rose Church, Whiterock, Corkyan, Irelandia",
+    paymentDetails: {
+      card_type: "Visa Credit",
+      card_name: "James Madison",
+      card_number: "0091 1242 0578 1157",
+      card_expiry: "09/25",
+    },
   },
   {
-    _id: 0,
-    title: 1,
-  }
-);
+    _id: "20001234_u_2",
+    favourites: [
+      { _id: "20001234_m_2" },
+      { _id: ObjectId("573a1390f29313caabcd41b1") },
+      { _id: ObjectId("573a1390f29313caabcd41aa") },
+      { _id: ObjectId("573a1390f29313caabcd418c") },
+    ],
+    name: "Andy Nard",
+    email: "andy.nard@gmail.com",
+    password: "andynard76=",
+    phone: "353 908070605",
+    imdb_membership_year: 2020,
+    subscription: {
+      type: "annual",
+      price_per_month: 25,
+    },
+    shipping_address: "33 Day of Reckon, Horrorhill, Terrorland, King of Fear",
+    paymentDetails: {
+      card_type: "Visa Debit",
+      card_name: "Loren Haley",
+      card_number: "1021 9007 0578 1244",
+      card_expiry: "06/27",
+    },
+  },
+  {
+    _id: "20001234_u_3",
+    favourites: [
+      { _id: ObjectId("573a1390f29313caabcd4274") },
+      { _id: ObjectId("573a1390f29313caabcd413e") },
+      { _id: ObjectId("573a1390f29313caabcd4135") },
+    ],
+    name: "Yolanda Marcucci",
+    email: "yolanda.marcucci@gmail.com",
+    password: "yolemarcucci66=",
+    phone: "353 89101112",
+    imdb_membership_year: 2001,
+    subscription: {
+      type: "3 month",
+      price_per_month: 40,
+    },
+    shipping_address: "56 Fortress Road, Terranova, Gynland",
+    paymentDetails: {
+      card_type: "Mastercard Credit",
+      card_name: "Yolanda Marcucci",
+      card_number: "9999 1347 2255 9980",
+      card_expiry: "06/28",
+    },
+  },
+]);
 
-// Outcome 576
-
-// Response
 // {
-//     title: 'Back to the Future',
+//     _id: ObjectId('573a1390f29313caabcd42bf'),
+//     title: 'Jack and the Beanstalk',
+//     year: 1902,
+//     runtime: 10,
+//     released: 1902-07-15T00:00:00.000Z,
+//     cast: [
+//       'Thomas White'
+//     ],
+//     poster: 'http://ia.media-imdb.com/images/M/MV5BMjAzNTI3MzI0Nl5BMl5BanBnXkFtZTcwMzQ1MTYzMw@@._V1_SX300.jpg',
+//     plot: "Porter's sequential continuity editing links several shots to form a narrative of the famous fairy tale story of Jack and his magic beanstalk. Borrowing on cinematographic methods ...",
+//     fullplot: "Porter's sequential continuity editing links several shots to form a narrative of the famous fairy tale story of Jack and his magic beanstalk. Borrowing on cinematographic methods reminiscent of 'Georges Melies', Porter uses animation, double exposure, and trick photography to illustrate the fairy's apparitions, Jack's dream, and the fast growing beanstalk.",
+//     lastupdated: '2015-08-29 00:25:25.360000000',
+//     type: 'movie',
+//     languages: [
+//       'English'
+//     ],
+//     directors: [
+//       'George S. Fleming',
+//       'Edwin S. Porter'
+//     ],
 //     imdb: {
-//       rating: 8.5
+//       rating: 6.2,
+//       votes: 442,
+//       id: 399
 //     },
+//     countries: [
+//       'USA'
+//     ],
 //     genres: [
-//       'Adventure',
-//       'Comedy',
-//       'Sci-Fi'
+//       'Short',
+//       'Fantasy'
 //     ]
 //   }
