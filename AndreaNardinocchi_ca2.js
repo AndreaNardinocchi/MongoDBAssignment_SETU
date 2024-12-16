@@ -188,7 +188,7 @@ db.movies.insertMany([
 ]);
 
 // Part 2, Users
-//
+// Create a users collection with three user documents.
 db.users.insertMany([
   {
     _id: "20001234_u_1",
@@ -264,6 +264,52 @@ db.users.insertMany([
     },
   },
 ]);
+
+/* Part 3 | Update
+On one of your movie documents (whichever you choose), update the IMDB rating to a new value 
+and increase the number of votes by 1. */
+
+db.movies.updateOne(
+  { _id: "20001234_m_1" },
+  { $set: { "imdb.rating": 10 }, $inc: { "imdb.votes": 1 } }
+);
+
+/* Part 3 | Update
+Add a new favourite to the array in one of your user documents. */
+db.users.updateOne(
+  { _id: "20001234_u_1" },
+  { $push: { favourites: { _id: ObjectId("573a1390f29313caabcd42ee") } } }
+);
+
+/* Part 3 | Update 
+We are adding an 'additional payment method and details', while changing password too */
+db.users.updateOne(
+  { _id: "20001234_u_2" },
+  {
+    $set: {
+      second_paymentDetails: {
+        card_type: "Mastercard credit",
+        card_name: "Andy Nard",
+        card_number: "3452 1889 2009 9876",
+        card_expiry: "08/02",
+      },
+      password: "andynardisgreat1976=",
+    },
+  }
+);
+
+/* Part 3 | Update 
+Email, phone number and subscription price is being change through the below update */
+db.users.updateOne(
+  { _id: "20001234_u_3" },
+  {
+    $set: {
+      email: "yolanda.marcucci66@yahoo.com",
+      phone: "353 862361777",
+      subscription: { price: 45 },
+    },
+  }
+);
 
 // {
 //     _id: ObjectId('573a1390f29313caabcd42bf'),
