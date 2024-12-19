@@ -193,13 +193,33 @@ db.users.insertMany([
   {
     _id: "20001234_u_1",
     favourites: [
-      { _id: "20001234_m_1" },
-      { _id: ObjectId("573a1390f29313caabcd4218") },
-      { _id: ObjectId("573a1390f29313caabcd4217") },
+      {
+        movie_id: ObjectId("573a1390f29313caabcd413e"),
+        title: "Tables Turned on the Gardener",
+        rating: 7
+      },
+      {
+        movie_id: ObjectId("573a1390f29313caabcd4136"),
+        title: "Pauvre Pierrot",
+        rating: 6
+      },
+      { movie_id: ObjectId("573a13daf29313caabdadb64"), title: 'Ma vie de courgette', rating: 9 },
+      { movie_id: ObjectId("573a13ddf29313caabdb4565"), title: 'Les Visiteurs 3: la Terreur', rating: 10 },
+      { movie_id: ObjectId("573a13d8f29313caabda716c"), title: 'La route des lacs', rating: 7 },
+      { movie_id: ObjectId("573a13e2f29313caabdbdbef"), title: 'The Serious Game', rating: 4.5 },
+      { movie_id: ObjectId("573a13f2f29313caabdddb88"), title: 'Mohenjo Daro', rating: 7.5 },
+      { movie_id: ObjectId("573a13f1f29313caabddc0ab"), title: 'From the Land of the Moon', rating: 9 },
+      { movie_id: ObjectId("573a13e2f29313caabdbe0c7"), title: 'On the Milky Road', rating: 4 },
+      { movie_id: ObjectId("573a1390f29313caabcd4274"), title: 'Let Me Dream Again', rating: 6 },
+      { movie_id: ObjectId("573a13eff29313caabdd8b51"), title: 'Dhishoom', rating: 5 },
+      { movie_id: ObjectId("573a13e3f29313caabdc02a4"), title: 'Ip Man 3', rating: 2 },
+      { movie_id: ObjectId("573a13f4f29313caabde1612"), title: 'Sekai kara neko ga kietanara', rating: 7.5 },
+      { movie_id: ObjectId("573a13cbf29313caabd7f7f8"), title: 'The Big Short', rating: 8 },
+      { movie_id: ObjectId("573a1390f29313caabcd4217"), title: 'Cinderella', rating: 8 }
     ],
-    name: "James Madison",
-    email: "james.madison@gmail.com",
-    password: "eljamesloco56=",
+    name: "Amanda Tanner",
+    email: "amanda_tanner@fakegmail.com",
+    password: "laamandaloca56=",
     phone: "353 090807060",
     imdb_membership_year: 2010,
     subscription: {
@@ -217,10 +237,31 @@ db.users.insertMany([
   {
     _id: "20001234_u_2",
     favourites: [
-      { _id: "20001234_m_2" },
-      { _id: ObjectId("573a1390f29313caabcd41b1") },
-      { _id: ObjectId("573a1390f29313caabcd41aa") },
-      { _id: ObjectId("573a1390f29313caabcd418c") },
+      {
+        movie_id: ObjectId("573a1390f29313caabcd446f"),
+        title: "A Corner in Wheat",
+        rating: 5.5
+      },
+      {
+        movie_id: ObjectId("573a1390f29313caabcd4ad2"),
+        title: "The Life and Death of King Richard III",
+        rating: 10
+      },
+      { movie_id: ObjectId("573a1390f29313caabcd4217"), title: 'Cinderella', rating: 9 },
+      { movie_id: ObjectId("573a1390f29313caabcd413e"), title: 'Tables Turned on the Gardener', rating: 7 },
+      { movie_id: ObjectId("573a13eff29313caabdd8b51"), title: 'Dhishoom', rating: 4.5 },
+      { movie_id: ObjectId("573a13f1f29313caabddc0ab"), title: 'From the Land of the Moon', rating: 8.5 },
+      { movie_id: ObjectId("573a13d8f29313caabda716c"), title: 'La route des lacs', rating: 10 },
+      { movie_id: ObjectId("573a13e2f29313caabdbe0c7"), title: 'On the Milky Road', rating: 9 },
+      { movie_id: ObjectId("573a13e3f29313caabdc02a4"), title: 'Ip Man 3', rating: 4 },
+      { movie_id: ObjectId("573a13f4f29313caabde1612"), title: 'Sekai kara neko ga kietanara', rating: 6.5 },
+      { movie_id: ObjectId("573a13ddf29313caabdb4565"), title: 'Les Visiteurs 3: la Terreur', rating: 5 },
+      { movie_id: ObjectId("573a13cbf29313caabd7f7f8"), title: 'The Big Short', rating: 9 },
+      { movie_id: ObjectId("573a13daf29313caabdadb64"), title: 'Ma vie de courgette', rating: 6 },
+      { movie_id: ObjectId("573a13e2f29313caabdbdbef"), title: 'The Serious Game', rating: 7.5 },
+      { movie_id: ObjectId("573a1390f29313caabcd4274"), title: 'Let Me Dream Again', rating: 4 },
+      { movie_id: ObjectId("573a1390f29313caabcd4136"), title: 'Pauvre Pierrot', rating: 9 },
+      { movie_id: ObjectId("573a13f2f29313caabdddb88"), title: 'Mohenjo Daro', rating: 8.5 }
     ],
     name: "Andy Nard",
     email: "andy.nard@gmail.com",
@@ -242,9 +283,30 @@ db.users.insertMany([
   {
     _id: "20001234_u_3",
     favourites: [
-      { _id: ObjectId("573a1390f29313caabcd4274") },
-      { _id: ObjectId("573a1390f29313caabcd413e") },
-      { _id: ObjectId("573a1390f29313caabcd4135") },
+      {
+        movie_id: ObjectId("573a1390f29313caabcd428d"),
+        title: "The India Rubber Head",
+        rating: 7
+      },
+      {
+        movie_id: ObjectId("573a1390f29313caabcd4292"),
+        title: "Panorama of Esplanade by Night",
+        rating: 4
+      },
+      { movie_id: ObjectId("573a13f2f29313caabdddb88"), title: 'Mohenjo Daro', rating: 4.5 },
+      { movie_id: ObjectId("573a1390f29313caabcd4274"), title: 'Let Me Dream Again', rating: 5 },
+      { movie_id: ObjectId("573a1390f29313caabcd4136"), title: 'Pauvre Pierrot', rating: 7 },
+      { movie_id: ObjectId("573a13daf29313caabdadb64"), title: 'Ma vie de courgette', rating: 9 },
+      { movie_id: ObjectId("573a13f1f29313caabddc0ab"), title: 'From the Land of the Moon', rating: 6.5 },
+      { movie_id: ObjectId("573a13eff29313caabdd8b51"), title: 'Dhishoom', rating: 6 },
+      { movie_id: ObjectId("573a13e2f29313caabdbdbef"), title: 'The Serious Game', rating: 3.5 },
+      { movie_id: ObjectId("573a13e3f29313caabdc02a4"), title: 'Ip Man 3', rating: 5 },
+      { movie_id: ObjectId("573a13cbf29313caabd7f7f8"), title: 'The Big Short', rating: 10 },
+      { movie_id: ObjectId("573a13d8f29313caabda716c"), title: 'La route des lacs', rating: 9 },
+      { movie_id: ObjectId("573a13e2f29313caabdbe0c7"), title: 'On the Milky Road', rating: 2 },
+      { movie_id: ObjectId("573a1390f29313caabcd4217"), title: 'Cinderella', rating: 7 },
+      { movie_id: ObjectId("573a13ddf29313caabdb4565"), title: 'Les Visiteurs 3: la Terreur', rating: 8 },
+      { movie_id: ObjectId("573a13f4f29313caabde1612"), title: 'Sekai kara neko ga kietanara', rating: 7.5 }
     ],
     name: "Yolanda Marcucci",
     email: "yolanda.marcucci@gmail.com",
@@ -270,15 +332,24 @@ On one of your movie documents (whichever you choose), update the IMDB rating to
 and increase the number of votes by 1. */
 
 db.movies.updateOne(
-  { _id: "20001234_m_1" },
+  { movie_id: "20001234_m_1" },
   { $set: { "imdb.rating": 10 }, $inc: { "imdb.votes": 1 } }
 );
 
 /* Part 3 | Update
 Add a new favourite to the array in one of your user documents. */
 db.users.updateOne(
-  { _id: "20001234_u_1" },
-  { $push: { favourites: { _id: ObjectId("573a1390f29313caabcd42ee") } } }
+  { _id: "20001234_u_3" },
+  {
+    $push: 
+    {favourites:
+    
+        { movie_id: ObjectId("573a1390f29313caabcd413e"), title: 'Tables Turned on the Gardener', rating: 9.8 },
+      
+      
+    }
+    },
+  
 );
 
 /* Part 3 | Update 
@@ -310,6 +381,231 @@ db.users.updateOne(
     },
   }
 );
+
+/* Part 3 | Delete
+Write the code to delete one of the movies you added.*/
+db.movies.deleteOne({ movie_id: "20001234_m_1" });
+
+/* Part 4 * | Aggregation Pipeline 1 
+The below pipeline uses $lookup to combine information from 'movies', and 'users' collections. 
+It, then, $project(s) several relevant fields.
+$unwind: to unwind the 'favourites', and 'favourites.rating', which is a rating assigned to the movies 
+by the user themselves.
+$group: it groups movies based on their title, reports their 'min', and 'max' rating, and calculate the average 
+rating for each movie
+$match: all 'favourites' whose rating is less than '6'
+$sort: sort by average rating (ascending order)
+/* https://www.mongodb.com/docs/manual/reference/operator/aggregation/lookup/ */
+
+db.users.aggregate([
+  {
+    $lookup: {
+      from: "movies",
+      localField: "favourites.title",
+      foreignField: "title",
+      as: "favouriteMovies_details",
+    },
+  },
+    {
+      $project: {
+        _id: 0,
+        name: 1,
+        email: 1,
+        imdb_membership_year: 1,
+        "favourites": 1,
+        "favouriteMovies_details.genres": 1,
+        "favouriteMovies_details.title": 1,
+        "favouriteMovies_details.cast": 1,
+        "favouriteMovies_details.directors": 1,
+        "favouriteMovies_details.imdb.rating": 1,
+        "favouriteMovies_details.year": 1,
+      },
+    },
+    {
+      $unwind: "$favourites",
+    },
+    {
+      $unwind: "$favourites.rating",
+    },
+    {
+      $group: {
+        _id: {
+        title: "$favourites.title",
+      },
+        minFavouritesRating: { $min: "$favourites.rating" },
+        maxFavouritesRating: { $max: "$favourites.rating" },
+        avgFavouritesRating: { $avg: "$favourites.rating" },
+      },
+    },
+    { 
+      $match: {
+        avgFavouritesRating: { $lt: 6 }
+    }
+  },
+    {
+      $sort: { avgFavouritesRating: 1 },
+    }
+  ]);
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################################################
+db.movies.aggregate([
+  { $match: { year: { $gte: 2015 } } },
+  {
+    $lookup: {
+      from: "users",
+      localField: "_id",
+      foreignField: "favourites.movie_id",
+      as: "movies_details",
+    },
+  },
+  {
+    $project: {
+      _id: 1,
+      title: 1,
+      cast: 1,
+      directors: 1,
+      year: 1,
+      "subscription.type": 1,
+      "imdb.rating": 1,
+      "movies_details.name": 1,
+      "movies_details.favourites.movie_id": 1,
+      "movies_details.favourites.rating": 1,
+    },
+  },
+  {
+    $unwind: "$movies_details",
+  },
+  {
+    $unwind: "$movies_details.favourites",
+  },
+  {
+    $unwind: "$movies_details.favourites.rating",
+  },
+  // {
+  //   $group: {
+  //     _id: "$movies_details.favourites.movie_id",
+  //     minMoviesDetailsRating: { $min: "$movies_details.favourites.rating" },
+  //     maxMoviesDetailsRating: { $max: "$movies_details.favourites.rating" },
+  //     avgMoviesDetailsRating: { $avg: "$movies_details.favourites.rating" },
+  //   },
+  // },
+  // {
+  // $project: {
+  //   _id: 1,
+  //   // title: 1,
+  //   // cast: 1,
+  //   // directors: 1,
+  //   // year: 1,
+  //   // "imdb.rating": 1,
+  //   // "movies_details.name": 1,
+  //   // "movies_details.favourites.movie_id": 1,
+  //   // "movies_details.favourites.rating": 1,
+  // },
+  // },
+
+  {
+    $sort: { avgMoviesDetailsRating: 1 },
+  },
+]);
+
+// {
+//   $group: {
+//     _id: null,
+//     favouritesMinRating: { $min: "$movies_details.favourites.rating" },
+//     favouritesMaxRating: { $max: "$movies_details.favourites.rating" },
+//   },
+// },
+
+/* Part 4 * | Aggregation Pipeline 2
+
+*/
+db.movies.aggregate([
+  {
+    $match: {
+      "imdb.rating": { $gt: 5 },
+      year: { $gte: 2015 },
+      runtime: { $gte: 90 },
+    },
+  },
+  {
+    $unwind: "$genres",
+  },
+  {
+    $group: {
+      _id: {
+        year: "$year",
+        genre: "$genres",
+        countries: "$countries",
+      },
+      min_rating: { $min: "$imdb.rating" },
+      max_rating: { $max: "$imdb.rating" },
+      avg_rating: { $avg: "$imdb.rating" },
+    },
+  },
+  {
+    $sort: { "_id.year": -1, average_rating: -1 },
+  },
+  {
+    $group: {
+      _id: "$_id.year",
+      genre: { $first: "$_id.genre" },
+      average_rating: { $first: "$avg_rating" },
+    },
+  },
+  {
+    $sort: { year: -1 },
+  },
+]);
+
+db.movies.aggregate([
+  {
+    $match: {
+      $and: [{ year: { $gte: 1960, $lte: 2020 } }],
+    },
+  },
+  {
+    $lookup: {
+      from: "users",
+      foreignField: "_id",
+      localField: "favourites._id",
+      as: "movies_details",
+    },
+  },
+  {
+    $unwind: "$imdb.rating",
+  },
+  // {
+  //   $group: {
+  //     _id: null,
+  //     imdbAverageRating: { $avg: "$imdb.rating"}
+  //   }
+  // },
+]);
 
 // {
 //     _id: ObjectId('573a1390f29313caabcd42bf'),
@@ -345,3 +641,38 @@ db.users.updateOne(
 //       'Fantasy'
 //     ]
 //   }
+
+db.classes.insertMany([
+  {
+    _id: 1,
+    title: "Reading is ...",
+    enrollmentlist: ["giraffe2", "pandabear", "artie"],
+    days: ["M", "W", "F"],
+  },
+  {
+    _id: 2,
+    title: "But Writing ...",
+    enrollmentlist: ["giraffe1", "artie"],
+    days: ["T", "F"],
+  },
+]);
+
+db.members.insertMany([
+  { _id: 1, name: "artie", joined: new Date("2016-05-01"), status: "A" },
+  { _id: 2, name: "giraffe", joined: new Date("2017-05-01"), status: "D" },
+  { _id: 3, name: "giraffe1", joined: new Date("2017-10-01"), status: "A" },
+  { _id: 4, name: "panda", joined: new Date("2018-10-11"), status: "A" },
+  { _id: 5, name: "pandabear", joined: new Date("2018-12-01"), status: "A" },
+  { _id: 6, name: "giraffe2", joined: new Date("2018-12-01"), status: "D" },
+]);
+
+db.classes.aggregate([
+  {
+    $lookup: {
+      from: "members",
+      localField: "enrollmentlist",
+      foreignField: "name",
+      as: "enrollee_info",
+    },
+  },
+]);
